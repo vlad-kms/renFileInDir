@@ -7,8 +7,10 @@ Param (
     [string]$Dest="",
     [string]$LeadingChar="",
     [switch]$Recurse,
+    [switch]$Debug,
     [int]$MaxNumber=99999999
 )
+$isDebug = $Debug.IsPresent;
 
 if ($Source -eq "") { $Source = ".\"; }
 if ($FileMask -eq "") { $FileMask = "*.mp3"; }
